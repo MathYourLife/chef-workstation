@@ -100,6 +100,7 @@ link ::File.join(home, ".gitconfig") do
   user uname
   group uname
   to ::File.join(git_mathyourlife, "dotfiles/gitconfig")
+  only_if node["chef-workstation"]["git"]["gitconfig"]
 end
 
 # =========== sublime ==========

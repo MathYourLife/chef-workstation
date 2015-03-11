@@ -14,3 +14,7 @@ default["chef-workstation"]["packages"] = %w{ git-core meld mercurial htop
 default["chef-workstation"]["golang"] = {
   "version" => "1.4.2"
 }
+
+default["chef-workstation"]["git"] {
+  "gitconfig" => true
+}
