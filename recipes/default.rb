@@ -63,7 +63,6 @@ end
   bash_aliases
   pythonenv
   renv
-  golang
 }.each do |f|
   link ::File.join(home, ".bashrc.conf", f) do
     user uname
