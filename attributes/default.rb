@@ -16,5 +16,5 @@ default["chef-workstation"]["golang"] = {
 }
 
 default["chef-workstation"]["git"] = {
-  "gitconfig" => true
+  "gitconfig" => "true"
 }
