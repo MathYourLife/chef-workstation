@@ -269,3 +269,20 @@ execute "install statsmodels" do
 EOF
   action :nothing
 end
+
+#============== AV ==============
+
+python_virtualenv ::File.join(venv, "youtube") do
+  interpreter "python3"
+  owner uname
+  group uname
+  action :create
+end
+%w{
+  youtube-dl
+}.each do |pkg|
+  python_pip pkg do
+    virtualenv ::File.join(venv, "youtube")
+    action :upgrade
+  end
+end
